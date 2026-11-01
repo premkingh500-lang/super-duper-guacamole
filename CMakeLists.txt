@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(magicmobile CXX)
+find_package(shadowhook REQUIRED CONFIG)
+add_library(magicmobile SHARED magic.cpp)
+target_link_libraries(magicmobile shadowhook::shadowhook EGL GLESv2 log android)
